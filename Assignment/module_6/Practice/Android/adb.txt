@@ -1,0 +1,120 @@
+adb start-server
+adb connect
+adb disconnect
+adb shell
+adb shell ls -l /storage
+adb push test.txt /storage/test.txt
+adb shell cat /storage/test.txt
+adb pull storage/test1.txt
+adb shell "pm list packages"
+adb install abc.apk
+adb uninstall abc.apk
+adb shell pm list libraries
+adb shell pm list features
+adb shell pm list users
+adb shell screecap /sdcard/sreen.png
+adb shell ls -l /sdcard
+adb pull /sdcard/sreen.png
+adb shell cat /proc/version
+adb shell cat /proc/cpuinfo
+
+unzip -qq firefox.apk -d firefox-unzip
+sudo apt-get install apktool
+apktool d firefox.apk
+
+install jadx
+sudo apt-get install git
+git clone https://github.com/skylot/jadx.git
+./gradlew dist
+cd /jadx/build/jadx/bin
+./jadx --version
+./jadx firefox.apk -d jadx
+find -name *.java
+
+apktool b firefox-folder -o firfox.apk
+sudo apt-get install default-jdk
+jarsigner --verify -verbose firefox.apk
+keytool -genkey -v -keystore mykeys.keystore -alias My_Keys -keyalg RSA -keysize 2048 -validity 265
+
+
+
+
+
+
+
+
+
+
+
+keytool -llist -keystore mykeys.keysotre
+jarsigner -verbose -sigalg SHA256withRSA -digestalg SHA1 -keystore keys/mykeys.keystore newfirefox.apk My_Keys
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
